@@ -686,7 +686,7 @@ function iso(d) { if (!d) return ''; var p = function (n) { return (n < 10 ? '0'
 function dmy(d) { return d ? d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear() : ''; }
 var MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function fmtDate(d) { return d ? d.getDate() + ' ' + MON[d.getMonth()] + ' ' + d.getFullYear() : '-'; }
-function fmtShort(d) { return d ? d.getDate() + ' ' + MON[d.getMonth()] + (d.getFullYear() !== today().getFullYear() ? ' ' + String(d.getFullYear()).slice(2) : '') : '-'; }
+function fmtShort(d) { return d ? d.getDate() + ' ' + MON[d.getMonth()] + ' ' + String(d.getFullYear()).slice(2) : '-'; }
 function addMonths(d, m) {
   var r = new Date(d.getFullYear(), d.getMonth() + m, 1);
   var last = new Date(r.getFullYear(), r.getMonth() + 1, 0).getDate();
